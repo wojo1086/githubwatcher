@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="github">
+<head>
+	<title>GitHub</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<script type="text/javascript" src="css-inject.js"></script>
+</head>
+<body>
+	<header ng-controller="HeaderController as vm">
+		<settings-dropdown></settings-dropdown>
+	</header>
+	<div class="mainView" ng-view></div>
+	<footer>
+		<div>
+			<span>Developed by: Timothy Wojtylak</span>
+		</div>
+	</footer>
+	<script type="text/javascript" src="libs/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="libs/angular.min.js"></script>
+	<script type="text/javascript" src="libs/angular.route.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="controllers/header-controller.js"></script>
+	<script type="text/javascript" src="controllers/login-controller.js"></script>
+	<script type="text/javascript" src="controllers/home-controller.js"></script>
+	<script type="text/javascript" src="controllers/about-controller.js"></script>
+	<script type="text/javascript" src="services/token-service.js"></script>
+	<script type="text/javascript" src="services/transact-service.js"></script>
+	<script type="text/javascript" src="services/storage-service.js"></script>
+	<script type="text/javascript" src="components/settings-dropdown.js"></script>
+</body>
+</html>

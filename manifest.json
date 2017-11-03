@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "GitHub Watcher",
+    "version": "0.1",
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "index.html",
+        "default_title": "GitHub"
+    },
+    "permissions": [
+        "<all_urls>",
+        "identity",
+        "storage"
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "oauth2": {
+        "client_id": "1097335570726-42ef8ubvodp429946n2a797nkq8hnqc5.apps.googleusercontent.com",
+        "scopes": [
+            "https://github.com/login/oauth/authorize"
+        ]
+    }
+}
