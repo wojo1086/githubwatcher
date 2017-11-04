@@ -12,7 +12,7 @@
 
 		function Initialize() {
 			var client_id = '09205adb746bc22a4e50';
-			var callback_url = 'https://ikfaoejnebaopmgbenmjpjmngilgfgem.chromiumapp.org/';
+			var callback_url = 'https://'+ chrome.runtime.id + '.chromiumapp.org/';
 			var auth_url = 'https://github.com/login/oauth/authorize/?client_id=' + client_id + '&redirect_uri=' + callback_url + '&state=AEBF2C3987&scope=repo';
 			var authData = {
 				url: auth_url,

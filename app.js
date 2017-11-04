@@ -15,6 +15,12 @@
 						}
 					}
 				})
+				.when('/initialSetup', {
+					url: '/initialSetup',
+					templateUrl: 'views/initial-setup.html',
+					controller: 'InitialSetupController',
+					controllerAs: 'vm'
+				})
 				.when('/home', {
 					url: '/home',
 					templateUrl: 'views/home.html',
