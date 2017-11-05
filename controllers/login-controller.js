@@ -7,7 +7,7 @@
 	                         $location) {
 		var vm = this;
 
-		if(!landing) {
+		if(landing) {
 			$location.path('home');
 		}
 

@@ -2,10 +2,78 @@
     margin: 0;
     padding: 0;
 }
-
 body {
     padding: 5px;
+    width: 300px;
 }
+
+.row {
+    display: flex;
+    padding: 5px 0;
+}
+.col-* {
+
+}
+.col-1 {
+    width: 8.333333%;
+}
+.col-2 {
+    width: 16.666667%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-4 {
+    width: 33.333333%;
+}
+.col-5 {
+    width: 41.666667%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-7 {
+    width: 58.333333%;
+}
+.col-8 {
+    width: 66.666667%;
+}
+.col-9 {
+    width: 75%
+}
+.col-10 {
+    width: 83.333333%;
+}
+.col-11 {
+    width: 91.666667%;
+}
+.col-12 {
+    width: 100%;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.bold {
+    font-weight: bold;
+}
+.save {
+    color: #FFFFFF;
+    border: none;
+    border-radius: 3px;
+    background-color: #28a745;
+    background-image: linear-gradient(-180deg, #34d058 0%, #28a745 90%);
+}
+.cancel {
+    color: #444444;
+    border: none;
+    border-radius: 3px;
+    background-color: #DCDCDC;
+    background-image: linear-gradient(-180deg, #EAEAEA 0%, #CBCBCB 90%);
+}
+
 header {
     height: 20px;
 }
@@ -24,9 +92,9 @@ header .fa-arrow-left {
 }
 .mainView {
     padding-bottom: 20px;
+    min-height: 100px;
 }
 .landingWrapper {
-    width: 300px;
     text-align: center;
 }
 .landingWrapper .name {
@@ -83,6 +151,21 @@ footer span {
 #dropdown a:hover {
     background-color: #EFEFEF;
 }
-#aboutPage {
-    width: 300px;
+#settings {
+    min-height: 300px;
+}
+#settings .settings-header {
+    border-bottom: 1px solid #EFEFEF;
+    padding-bottom: 10px;
+}
+#settings .listed-repos {
+    border-bottom: 1px solid #EFEFEF;
+}
+#settings button {
+    padding: 4px 9px;
+    cursor: pointer;
+    font-size: 12px;
+}
+#settings .save-buttons {
+    padding-top: 10px;
 }

@@ -3,8 +3,8 @@
 
 	angular.module('github').controller('HomeController', HomeController);
 
-	function HomeController(StorageService,
-	                        TokenService,
+	function HomeController($location,
+	                        StorageService,
 	                        TransactService) {
 		var vm = this;
 
@@ -35,15 +35,14 @@
 					StorageService.set({landing: true});
 					var tokenPre = data.split('=')[1];
 					var token = tokenPre.split('&')[0];
-					TokenService.setToken(token);
-					//chrome.extension.getBackgroundPage().console.log(TokenService.getToken());
-					var request = {
-						url: 'https://api.github.com/user/repos',
-						use_token: true
+					var message = {
+						type: 'setToken',
+						data: {
+							token: token
+						}
 					};
-					TransactService.transactGet(request).then(function (data) {
-						chrome.extension.getBackgroundPage().console.log(data);
-					})
+					chrome.runtime.sendMessage(message);
+					$location.path('settings');
 				});
 			});
 

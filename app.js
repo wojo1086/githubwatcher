@@ -15,10 +15,10 @@
 						}
 					}
 				})
-				.when('/initialSetup', {
-					url: '/initialSetup',
-					templateUrl: 'views/initial-setup.html',
-					controller: 'InitialSetupController',
+				.when('/settings', {
+					url: '/settings',
+					templateUrl: 'views/settings.html',
+					controller: 'SettingsController',
 					controllerAs: 'vm'
 				})
 				.when('/home', {
