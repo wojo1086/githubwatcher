@@ -10,10 +10,24 @@
     "permissions": [
         "<all_urls>",
         "identity",
-        "storage"
+        "storage",
+        "activeTab",
+        "tabs",
+        "notifications"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["alert.js"]
+        }
     ],
     "background": {
-        "scripts": ["background.js"]
+        "scripts": [
+            "background/background.js",
+            "background/transactor.js",
+            "background/storage.js",
+            "libs/jquery-3.2.1.min.js",
+            "libs/moment.js"]
     },
     "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
     "oauth2": {

@@ -5,19 +5,17 @@
 		.factory('TokenService', TokenService);
 
 	function TokenService() {
-		var token;
 
 		return {
-			getToken: getToken,
-			setToken: setToken
+			getToken: getToken
 		}
 
 		function getToken() {
-			return token;
-		}
-
-		function setToken(data) {
-			token = data;
+			var message = {
+				type: 'getToken',
+				data: token
+			};
+			return chrome.runtime.sendMessage(message);;
 		}
 	}
 })();

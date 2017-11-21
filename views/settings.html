@@ -1,0 +1,26 @@
+<div id="settings">
+	<div class="row settings-header">
+		<div class="col-6 bold">Repos</div>
+		<div class="col-6 bold">Notifications</div>
+	</div>
+	<div class="row listed-repos"
+	     ng-repeat="repo in vm.repos">
+		<div class="col-6">
+			{{repo.name}}
+		</div>
+		<div class="col-6">
+			<input type="checkbox"
+			       ng-click="vm.changesMade = true"
+			       ng-model="repo.selected">
+		</div>
+	</div>
+	<div class="row save-buttons" ng-show="vm.changesMade">
+		<div class="col-6"></div>
+		<div class="col-3 text-right">
+			<button class="cancel" ng-click="vm.cancelChanges()">Cancel</button>
+		</div>
+		<div class="col-3 text-right">
+			<button class="save" ng-click="vm.saveChanges()">Save</button>
+		</div>
+	</div>
+</div>
